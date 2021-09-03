@@ -1,0 +1,41 @@
+oauth2:
+  client:
+    provider:
+      kakao:
+        scheme: https
+        auth-host: kauth.kakao.com
+        auth-path: /oauth/authorize
+        token-path: /oauth/token
+        client-id: ddaff16cda808e8e3dfedf3ed04a1c66
+        client-secret: 1RuflGc4iNEYKIKHWfkW5LbHDgpuIXtr
+        redirect-uri: http://localhost:8080/callback
+        response-type: code
+        grant-type: authorization_code
+        refresh-token-grant-type: refresh_token
+        scope: profile_nickname profile_image account_email age_range
+        api-host: kapi.kakao.com
+
+spring:
+  datasource:
+    generate-unique-name: false
+    hikari:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:member;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1
+      username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+logging:
+  level:
+    org:
+      zalando:
+        logbook: TRACE
