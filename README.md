@@ -7,6 +7,7 @@
 
 
 ## 개발 환경 및 프레임워크
+- 소스 GitHub 주소 : [https://github.com/hsk741/kakaoenterprise-demo](https://github.com/hsk741/kakaoenterprise-demo)
 - 기본 환경
   - IDE: IntelliJ IDEA
   - OS: MAC
